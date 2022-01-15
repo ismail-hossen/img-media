@@ -129,3 +129,28 @@ body{
 .collection-info div span{
     margin-left: 8px;
 }
+
+/* footer section start */
+footer{
+    display: flex;
+    color: #ffffff;
+    background-color: #0A0826;
+    text-align: center;
+    height: 230px;
+    justify-content: center;
+    line-height: 35px;
+    align-items: center;
+}
+footer div h2, p{
+    margin: 0;
+}
+footer p {
+    color: #D9DBE1;
+}
+footer div div i{
+    background-color: #22213C;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 15px;
+}
