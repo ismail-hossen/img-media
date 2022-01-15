@@ -13,7 +13,9 @@ body{
 :root{
     --color: #E02C6D;;
 }
-
+a{
+    text-decoration: none;
+}
 /* start nav area  */
 nav{
     width: 80%;
@@ -28,7 +30,7 @@ nav{
 .navigation ul{
     display: flex;
 }
-a{
+.navigation ul ol a{
     text-decoration: none;
     color: #3A3A3A;
 }
@@ -72,6 +74,13 @@ a{
     text-align: center;
     font-size: 20px;
 }
+.banner-left button:hover{
+    background-color: white;
+    border: 2px solid var(--color);
+    color: var(--color);
+    transition: width 2s, height 4s;
+    transition: 1s;
+}
 .banner-left button i{
     margin-left: 8px;
 }
@@ -97,12 +106,6 @@ a{
 .collection-area #collection-title{
     font-size: 35px;
     color: #3A3A3A;
-}
-.collection-box-area .see-more-button{
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--color);
 }
 .collection-box{
     margin: 80px auto;
@@ -155,9 +158,46 @@ a{
 .collection-info div span{
     margin-left: 8px;
 }
+.see-more-button{
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+.see-more-button a{
+    color: var(--color);
+}
 .see-more-button i{
     margin-left: 8px;
 }
+
+/* mobile screen responsive  */
+@media (max-width: 600px) {
+    .collection-box{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner{
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-left{
+        order: 2;
+    }
+    .banner-right{
+        order: 1;
+    }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+    .collection-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
 
 /* form section start  */
 .form-area{
@@ -170,6 +210,10 @@ form{
 }
 form fieldset{
     height: 250px;
+}
+form fieldset p{
+    color: #787885;
+    box-shadow: 0px 0px 30px -5px #787885;
 }
 form fieldset legend{
     text-transform: uppercase;
@@ -211,6 +255,9 @@ footer div h2, p{
 }
 footer p{
     color: #D9DBE1;
+}
+footer h2 span{
+    color: var(--color);
 }
 footer div div i{
     background-color: #22213C;
